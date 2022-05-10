@@ -98,11 +98,15 @@
                 };
 
                 sheet.getUnderlyingDataAsync(options).then(function(t){
+		    console.log("Got data...");
                     table = t;
                     var tgt = document.getElementById("dataTarget");
                     let tables = getTableList(t.getData());
                     injectTables(tables);
-                });
+                }).catch(function(err) {
+		    console.log("Could not get data");
+		    console.log(err);
+		});
             }
     </script>
 </head>
