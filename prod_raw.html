@@ -29,7 +29,7 @@
           let unique_tabels = {};
           // let all_rows = data.map(row => { return {'product': row[0]['value'], 'database': row[1]['value'], 'schema': row[2]['value'], 'table': row[3]['value']}})
           data.map(row => {
-            unique_tabels[`${row[17]['value']}_${row[16]['value']}_${row[18]['value']}_${row[0]['value']}`] = {'product': row[17]['value'], 'database': row[16]['value'], 'schema': row[18]['value'], 'table': row[0]['value']}
+            unique_tabels[`${row[13]['value']}_${row[11]['value']}_${row[14]['value']}_${row[1]['value']}`] = {'product': row[13]['value'], 'database': row[11]['value'], 'schema': row[14]['value'], 'table': row[1]['value']}
           });
           return Object.values(unique_tabels);
         }
@@ -92,7 +92,7 @@
 		 // If the active sheet is not a dashboard, then you can just enter:
 		 // viz.getWorkbook().getActiveSheet();
                 options = {
-                    maxRows: 1000, // Max rows to return. Use 0 to return all rows
+                    maxRows: 100000, // Max rows to return. Use 0 to return all rows
                     ignoreAliases: false,
                     ignoreSelection: true,
                     includeAllColumns: false
