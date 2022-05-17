@@ -104,7 +104,7 @@
                     var tgt = document.getElementById("dataTarget");
                     let tables = getTableList(t.getData());
                     injectTables(tables);
-                }).catch(function(err) {
+                }, function(err) {
 		    console.log("Could not get data");
 		    console.log(err);
 		});
