@@ -99,7 +99,7 @@
                 };
 
                 sheet.getUnderlyingDataAsync(options).then(function(t){
-		    console.log("Got data...");
+		    console.log("Got data...", t.getData());
                     table = t;
                     var tgt = document.getElementById("dataTarget");
                     let tables = getTableList(t.getData());
